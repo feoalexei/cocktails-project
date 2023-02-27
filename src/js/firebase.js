@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
+// import { getAnalytics } from 'firebase/analytics';
 import { getCocktailById } from './CocktailsApiService';
 import { markupCard } from './randomCocktailsCards';
 import { inFavoritePage, markupToggle } from './favoriteCocktails';
@@ -19,19 +19,28 @@ import {
   update,
 } from 'firebase/database';
 
+// const firebaseConfig = {
+//   apiKey: 'AIzaSyDFcAreCWID-9C9oPsYvHsHfe-CGSdW08U',
+//   authDomain: 'cocktails-team-project-86758.firebaseapp.com',
+//   projectId: 'cocktails-team-project-86758',
+//   storageBucket: 'cocktails-team-project-86758.appspot.com',
+//   messagingSenderId: '24636582189',
+//   appId: '1:24636582189:web:30f6356787dd0fd3b2cba4',
+//   measurementId: 'G-0MXLZKTJYN',
+// };
+
 const firebaseConfig = {
-  apiKey: 'AIzaSyDFcAreCWID-9C9oPsYvHsHfe-CGSdW08U',
-  authDomain: 'cocktails-team-project-86758.firebaseapp.com',
-  projectId: 'cocktails-team-project-86758',
-  storageBucket: 'cocktails-team-project-86758.appspot.com',
-  messagingSenderId: '24636582189',
-  appId: '1:24636582189:web:30f6356787dd0fd3b2cba4',
-  measurementId: 'G-0MXLZKTJYN',
+  apiKey: "AIzaSyD8CzjSPEofYs7eezU9xRf6JPND88o0EF8",
+  authDomain: "cocktails-project-acbb6.firebaseapp.com",
+  projectId: "cocktails-project-acbb6",
+  storageBucket: "cocktails-project-acbb6.appspot.com",
+  messagingSenderId: "436377583076",
+  appId: "1:436377583076:web:246a8bbdb6040efe3b5bf1"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
 const provider = new GoogleAuthProvider();
 const db = getDatabase();
 
